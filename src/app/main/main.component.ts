@@ -1,19 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css']
 })
-export class AppComponent implements OnInit{
-
-  private _title = 'TestApp';
+export class MainComponent implements OnInit {
   private myArr:Array<object> = [];
-  //private myArr2:Object[] = [];  this line equals the above one
-  constructor() {
-    //setup
 
-  }
+  constructor() { }
+  
 
   ngOnInit() {
     console.log('angular initializing..');
@@ -26,14 +22,5 @@ export class AppComponent implements OnInit{
       {id: 6, name:"kelly", profession:"stu", school:"csuf"},
     ]
     console.log('myArray--->', this.myArr)
-  }
-
-  private get Title() {
-    return this._title;
-  }
-
-
-  private set Title(title:any) {
-    this._title = title;
   }
 }
